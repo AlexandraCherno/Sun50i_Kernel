@@ -1,0 +1,144 @@
+/*
+ * Forlinx Technology CO., Ltd. okt507-c soc board.
+ *
+ * soc board support.
+ */
+
+&vind0 {
+	vind0_clk = <324000000>;
+	status = "okay";
+
+	csi_cci0:cci@0 {
+		status = "okay";
+	};
+
+	csi_cci1:cci@1 {
+		status	= "okay";
+	};
+
+	csi0:csi@0 {
+		pinctrl-names = "default","sleep";
+		pinctrl-0   = <>;
+		pinctrl-1	= <>;
+		status = "okay";
+	};
+
+	csi1:csi@1 {
+	     	status	= "okay";
+     	};
+
+	actuator0:actuator@0 {
+		device_type = "actuator0";
+		actuator0_name = "ad5820_act";
+		actuator0_slave = <0x18>;
+		actuator0_af_pwdn = <>;
+		actuator0_afvdd = "afvcc-csi";
+		actuator0_afvdd_vol = <2800000>;
+		status = "disabled";
+	};
+
+	flash0:flash@0 {
+		device_type = "flash0";
+		flash0_type = <2>;
+		flash0_en = <>;
+		flash0_mode = <>;
+		flash0_flvdd = "";
+		flash0_flvdd_vol = <>;
+		device_id = <0>;
+		status = "disabled";
+	};
+			
+	sensor0:sensor@0 {
+		device_type = "sensor0";
+		sensor0_mname = "tp2854_mipi";
+		sensor0_twi_cci_id = <0>;
+		sensor0_twi_addr = <0x88>;
+		sensor0_mclk_id = <0>;
+		sensor0_pos = "rear";
+		sensor0_isp_used = <0>;
+		sensor0_fmt = <0>;
+		sensor0_stby_mode = <0>;
+		sensor0_vflip = <0>;
+		sensor0_hflip = <0>;
+		sensor0_iovdd-supply = <>;
+		sensor0_avdd-supply = <>;
+		sensor0_avdd_vol = <1200000>;
+		sensor0_dvdd-supply = <>;
+		sensor0_dvdd_vol = <>;
+		sensor0_power_en = <>;
+		sensor0_reset = <&gpio_ext 14 0>;
+		sensor0_pwdn = <>;
+		sensor0_sm_vs = <>;
+		status	= "okay";
+	};
+								
+	sensor1:sensor@1 {
+		status	= "okay";
+	};
+
+	vinc0:vinc@0 {
+		vinc0_csi_sel = <0>;
+		vinc0_mipi_sel = <0>;
+		vinc0_isp_sel = <0>;
+		vinc0_isp_tx_ch = <0>;
+		vinc0_rear_sensor_sel = <0>;
+		vinc0_front_sensor_sel = <0>;
+		vinc0_sensor_list = <0>;
+		status = "okay";
+	};
+
+	vinc1:vinc@1 {
+		vinc1_csi_sel = <0>;
+		vinc1_mipi_sel = <0>;
+		vinc1_isp_sel = <0>;
+		vinc1_isp_tx_ch = <1>;
+		vinc1_rear_sensor_sel = <0>;
+		vinc1_front_sensor_sel = <0>;
+		vinc1_sensor_list = <0>;
+		status = "okay";
+	};
+
+	vinc2:vinc@2 {
+		vinc2_csi_sel = <0>;
+		vinc2_mipi_sel = <0>;
+		vinc2_isp_sel = <0>;
+		vinc2_isp_tx_ch = <2>;
+		vinc2_rear_sensor_sel = <0>;
+		vinc2_front_sensor_sel = <0>;
+		vinc2_sensor_list = <0>;
+		status = "okay";
+	};
+
+	vinc3:vinc@3 {
+		vinc3_csi_sel = <0>;
+		vinc3_mipi_sel = <0>;
+		vinc3_isp_sel = <0>;
+		vinc3_isp_tx_ch = <3>;
+		vinc3_rear_sensor_sel = <0>;
+		vinc3_front_sensor_sel = <0>;
+		vinc3_sensor_list = <0>;
+		status = "okay";
+	};
+
+	vinc4:vinc@4 {
+		vinc4_csi_sel = <1>;
+		vinc4_mipi_sel = <0xff>;
+		vinc4_isp_sel = <1>;
+		vinc4_isp_tx_ch = <0>;
+		vinc4_rear_sensor_sel = <1>;
+		vinc4_front_sensor_sel = <1>;
+		vinc4_sensor_list = <0>;
+		status = "okay";
+	};
+
+	vinc5:vinc@5 {
+		vinc5_csi_sel = <1>;
+		vinc5_mipi_sel = <0xff>;
+		vinc5_isp_sel = <1>;
+		vinc5_isp_tx_ch = <3>;
+		vinc5_rear_sensor_sel = <1>;
+		vinc5_front_sensor_sel = <1>;
+		vinc5_sensor_list = <0>;
+		status = "disabled";
+	};	
+};

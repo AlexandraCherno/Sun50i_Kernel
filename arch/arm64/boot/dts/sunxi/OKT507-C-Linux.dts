@@ -1,0 +1,9 @@
+/*
+ * Forlinx Technology CO., Ltd. okt507-c soc board.
+ *
+ * soc board support.
+ */
+/dts-v1/;
+
+#include "OKT507-C-Common.dtsi"
+//#include "OKT507-C-Common-TP2854M.dtsi"
